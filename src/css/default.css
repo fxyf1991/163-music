@@ -23,6 +23,9 @@ a{
      font-size: 12px;
      line-height: 1.5;
  }
+ input{
+     font-size: inherit;
+ }
 
  /* layout */
 .page{
@@ -31,11 +34,10 @@ a{
 }
 .page > aside{
     width: 200px;
-
 }
 .page > main{
     flex-grow: 1;
-    border: 1px solid red;
+    padding-left: 20px;
 }
 
 /* aside */
@@ -47,12 +49,14 @@ a{
     padding: 10px;
     text-align: center;
 }
-.newSong .active{
+.newSong.active{
     background: #d4d4d4;
+}
+#songList-container{
+    flex-grow: 1;
 }
 .songList{
     border-top: 1px solid #999;
-    flex-grow: 1;
 }
 .songList > li{
     border-bottom: 1px solid #ddd;
@@ -76,4 +80,44 @@ a{
 }
 .clickable{
     cursor: pointer;
+}
+
+/* main */
+.page > main{
+    background: #d4d4d4;
+}
+.form{
+    font-size: 14px;
+}
+.form > .row{
+    margin: 20px 0;
+    display: flex;
+}
+.form > .row > label{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 4em;
+    margin-right: 5px;
+}
+.form > .row.actions{
+    margin-left: calc(4em + 5px);
+}
+.form input[type=text]{
+    padding: 3px 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    height: 30px;
+}
+.form input[type=button],
+.form input[type=submit],
+.form button{
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    background: white;
+}
+.page > main{
+    padding-top: 20px;
 }
