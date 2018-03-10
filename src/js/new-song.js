@@ -21,9 +21,11 @@
             window.eventHub.on('select', (data)=>{
                 this.deActive()
             })
+            $(this.view.el).on('click', this.active.bind(this)) //不绑定this会出bug
         },
         active(){
             $(this.view.el).addClass('active')
+            window.eventHub.emit('new')
         },
         deActive(){
             $(this.view.el).removeClass('active')
