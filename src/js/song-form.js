@@ -50,6 +50,16 @@
         data: {
             name: '', singer: '', url: '', id: ''
         },
+        update(data){
+            var song = AV.Object.createWithoutData('Song', this.data.id);
+            song.set('name', data.name);
+            song.set('singer', data.singer);
+            song.set('url', data.url);
+            return song.save().then((response)=>{
+                Object.assign(this.data,data)
+                return response
+            })
+        },
         create(data){
             var Song = AV.Object.extend('Song');
             var song = new Song();
@@ -86,19 +96,38 @@
                 this.view.render(this.model.data)
             })
         },
+        create(){
+            let needs = 'name singer url'.split(' ')
+            let data = {}
+            needs.map((string) => {
+                data[string] = this.view.$el.find(`[name="${string}"]`).val()
+            })
+            this.model.create(data)
+                .then(()=>{
+                    this.view.reset()
+                    window.eventHub.emit('create', this.model.data)
+                })
+        },
+        update(){
+            let needs = 'name singer url'.split(' ')
+            let data = {}
+            needs.map((string) => {
+                data[string] = this.view.$el.find(`[name="${string}"]`).val()
+            })
+            this.model.update(data)
+                .then(()=>{
+                    //alert('更新成功')
+                    window.eventHub.emit('update', JSON.parse(JSON.stringify(this.model.data)))
+                })
+        },
         bindEvents() {
             this.view.$el.on('submit', 'form', (e) => {
                 e.preventDefault()
-                let needs = 'name singer url'.split(' ')
-                let data = {}
-                needs.map((string) => {
-                    data[string] = this.view.$el.find(`[name="${string}"]`).val()
-                })
-                this.model.create(data)
-                    .then(()=>{
-                        this.view.reset()
-                        window.eventHub.emit('create', this.model.data)
-                    })
+                if(this.model.data.id){
+                    this.update()
+                }else {
+                    this.create()
+                }
             })
         }
     }
