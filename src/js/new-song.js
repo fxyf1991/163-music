@@ -15,17 +15,18 @@
             this.model = model
             this.view.render(this.model.data)
             this.active()
-            window.eventHub.on('upload', (data)=>{
+            window.eventHub.on('new', (data)=>{
                 this.active()
             })
             window.eventHub.on('select', (data)=>{
                 this.deActive()
             })
-            $(this.view.el).on('click', this.active.bind(this)) //不绑定this会出bug
+            $(this.view.el).on('click', ()=>{
+                window.eventHub.emit('new')
+            })
         },
         active(){
             $(this.view.el).addClass('active')
-            window.eventHub.emit('new')
         },
         deActive(){
             $(this.view.el).removeClass('active')
