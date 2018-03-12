@@ -6,7 +6,7 @@
         },
         render(data){
             let {song,status} = data
-            this.$el.css('background-image', `url(${song.cover})`)
+            this.$el.find('.pageBackground').css('background-image', `url(${song.cover})`)
             this.$el.find('img.cover').attr('src',song.cover)
             if (this.$el.find('audio').attr('src') !== song.url){
                 let  audio = this.$el.find('audio').attr('src',song.url).get(0)
@@ -22,16 +22,13 @@
             }else {
                 this.$el.find('.disc-container').removeClass('playing')
             }
-
             this.$el.find('.song-description>h1').text(song.name)
-
             let {lyrics} = song
             let array = lyrics.split('\n').map((string)=>{
                 let p = document.createElement('p')
                 let regex = /\[([\d:.]+)\](.*)/
                 let match = string.match(regex)
                 if (match){
-
                     p.textContent = match[2]
                     let time = match[1]
                     let parts = time.split(':')

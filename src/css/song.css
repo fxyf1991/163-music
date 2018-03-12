@@ -7,6 +7,15 @@
     background: transparent no-repeat center;
     background-size: cover;
 }
+.page>.pageBackground {
+    background: transparent  no-repeat center;
+    background-size: cover;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    filter: blur(10px);
+    z-index: -1;
+}
 
 .disc-container{position: relative; }
 .disc-container .icon-wrapper{position: absolute; z-index: 1; display: flex;
