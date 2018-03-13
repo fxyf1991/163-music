@@ -3,69 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <title>管理页面</title>
-    <link rel="stylesheet" href="./css/default.css">
+    <!--<link rel="stylesheet" href="./css/default.css">-->
+    <link rel="stylesheet" href="./css/admin.css">
 </head>
 <body>
 
 <div class="page">
-    <aside class="sidebar">
-        <div class="newSong">
-            新建歌曲
-        </div>
-        <div id="songList-container">
-            <ul class="songList">
-                <li>歌曲1</li>
-                <li class="active">歌曲2</li>
-                <li>歌曲3</li>
-                <li>歌曲4</li>
-                <li>歌曲5</li>
-                <li>歌曲6</li>
-                <li>歌曲7</li>
-                <li>歌曲8</li>
-                <li>歌曲9</li>
-                <li>歌曲10</li>
-            </ul>
-        </div>
+    <div class="topBar">
+        <svg id='neteaseMusic' class="icon neteaseMusic" aria-hidden="true">
+            <use xlink:href="#icon-CN_NetEasemusic"></use>
+        </svg>
+        <span>网易云音乐</span>
+    </div>
+    <div class="mainPage">
+        <aside class="sidebar">
+
+            <div id="songList-container">
+                <ul class="songList">
+                    <li>.歌曲1</li>
+                    <li class="active">歌曲2</li>
+                    <li>歌曲3</li>
+                    <li>歌曲4</li>
+                    <li>歌曲5</li>
+                    <li>歌曲6</li>
+                    <li>歌曲7</li>
+                    <li>歌曲8</li>
+                    <li>歌曲9</li>
+                    <li>歌曲10</li>
+                </ul>
+            </div>
+            <div class="newSong">
+                <span>
+                    <svg id='plus' class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                    </svg>
+                    新建歌曲
+                </span>
+            </div>
+
+        </aside>
         <div class="uploadArea">
             <div id="uploadContainer" class="draggable">
+                <span>将文件拖曳至此上传</span>
                 <div id="uploadButton" class="clickable">
-                    <span >点击或拖拽文件</span>
-                    <p>文件大小不能超过40MB</p>
+                    <span >选择文件</span>
+
                 </div>
 
             </div>
         </div>
-    </aside>
-    <main>
-        <h1>新建歌曲</h1>
-        <form class="form">
-            <div class="row">
-                <label>
-                    歌名
-                </label>
-                <input type="text">
-            </div>
-            <div class="row">
-                <label>
-                    歌手
-                </label>
-                <input type="text">
-            </div>
-            <div class="row">
-                <label>
-                    外链
-                </label>
-                <input type="text">
-            </div>
-            <div class="row actions">
-                <button type="submit">保存</button>
-            </div>
+        <main>
 
-        </form>
-    </main>
+            <form class="form">
+                <div class="row">
+                    <label>
+                        歌名
+                    </label>
+                    <input type="text">
+                </div>
+                <div class="row">
+                    <label>
+                        歌手
+                    </label>
+                    <input type="text">
+                </div>
+                <div class="row">
+                    <label>
+                        外链
+                    </label>
+                    <input type="text">
+                </div>
+                <div class="row actions">
+                    <button type="submit">保存</button>
+                </div>
+
+            </form>
+        </main>
+    </div>
+
 </div>
 <div id="site-loading" class="site-loading">
-    loading
+
 </div>
 <script src="../node_modules/leancloud-storage/dist/av-min.js"></script>
 <script src="./js/initializers/av.js"></script>
@@ -79,5 +97,6 @@
 <script src="js/admin/new-song.js"></script>
 <script src="js/admin/song-list.js"></script>
 <script src="js/admin/upload-song.js"></script>
+<script src="//at.alicdn.com/t/font_588593_xngirx0wo9cz0k9.js"></script>
 </body>
 </html>

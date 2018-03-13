@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.icon.svgMusic {
+    width: 2em;
+    height: 2em;
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 80vh;
+    box-shadow: 0px -3px 10px 0px #BDB5B1,-3px 0px 10px 0px #BDB5B1,3px 0px 10px 0px #BDB5B1,0px 3px 10px 0px #BDB5B1;
+    border-radius: 5px;
+}
+
+.topBar {
+    width: 100%;
+    height: 10vh;
+    background: #D43C33;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+}
+.topBar > span{
+    font-size: 1.5em;
+    padding-left: 0.3em;
+    color: white;
+}
+.neteaseMusic{
+    margin-left: 1em;
+    width: 2em;
+    height: 2em;
+}
+.mainPage {
+    flex-grow: 1;
+    display: flex;
+
+}
+.uploadArea{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+
+}
+.draggable{
+    width: 80%;
+    height: 40vh;
+    border: 2px dashed #E2E2E2;
+    margin-top: 12%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #E2E2E2;
+
+}
+.draggable > span{
+    letter-spacing: 0.3em;
+}
+.clickable{
+    position: absolute;
+    border: 1px solid #AA3722;
+    width: 12vw;
+    height: 6vh;
+    top: 47vh;
+    left: 5vh;
+    border-radius: 5px;
+    color: #AA3722;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside {
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+ul{
+    overflow: auto;
+    height: 57vh;
+}
+
+li {
+    height: 50px;
+    overflow: hidden;
+    background: #EFEFEF;
+    position: relative;
+}
+
+li:nth-child(even) {
+    background: #F7F7F7;
+}
+li > .svgMusic{
+    position: absolute;
+    left: 3%;
+    top: 17%;
+}
+
+.songWrapper{
+    margin-left: 24%;
+    height: 50px;
+    padding-top: 2%;
+}
+.singer{
+    margin-left: 5%;
+}
+.newSong{
+    border-top: 1px solid #E3E3E3;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #ffffff 0%,#e7e7e7 100%,#e7e7e7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    border-radius: 0 0 0 5px;
+}
+.songWrapper > span{
+    color: #575757;
+    font-size: 0.9em;
+}
+main{
+    display: none;
+
+}
+main.active{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    border: 2px dashed #E2E2E2;
+    padding: 2em;
+    border-radius: 10px;
+
+}
+.row{
+    display: flex;
+    margin-bottom: 0.3em;
+    align-items: center;
+}
+input{
+    height: 3em;
+    width: 30em;
+    line-height: 2em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding-left: 0.3em;
+}
+button{
+    background: white;
+    width: 12vw;
+    height: 3em;
+    border: 1px solid #AA3722;
+    color: #AA3722;
+    border-radius: 5px;
+}
+label{
+    font-size: 1.3em;
+    margin-right: 0.5em;
+}
+textarea{
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 30em;
+    height: 13em;
+}

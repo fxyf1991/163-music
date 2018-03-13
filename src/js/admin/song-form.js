@@ -1,6 +1,6 @@
 {
     let view = {
-        el: '.page > main',
+        el: '.mainPage > main',
         init() {
             this.$el = $(this.el)
         },
@@ -48,11 +48,12 @@
                 html = html.replace(`__${string}__`, data[string] || '')
             })
             $(this.el).html(html)
-            if (data.id){
-                $(this.el).prepend('<h1>编辑歌曲</h1>')
-            }else{
-                $(this.el).prepend('<h1>新建歌曲</h1>')
-            }
+            // if (data.id){
+            //     $(this.el).prepend('<h1>编辑歌曲</h1>')
+            // }else{
+            //     $(this.el).prepend('<h1>新建歌曲</h1>')
+            // }
+
         },
         reset(){
             this.render({})
@@ -103,14 +104,16 @@
                 this.view.render(this.model.data)
             })
             window.eventHub.on('new',(data)=>{
+                console.log(data)
                 if (this.model.data.id){
                     this.model.data = {
                         name: '',url:'',id:'',singer:'',lyrics: ''
                     }
-                }else {
-                    Object.assign(this.model.data, data)
+                }else {Object.assign(this.model.data, data)
+
                 }
                 this.view.render(this.model.data)
+                console.log(1111)
             })
         },
         create(){

@@ -66,6 +66,8 @@
                             url: sourceLink,
                             name: response.key
                         })
+                        $('.uploadArea').hide()
+                        $('main').addClass('active')
                     },
                     'Error': function (up, err, errTip) {
                         //上传出错时,处理相关的事情

@@ -3,16 +3,28 @@
         el: '#songList-container',
         template: `
             <ul class="songList">
+            
             </ul>
         `,
         render(data) {
             $(this.el).html(this.template)
             let {songs, selectSongId} = data
             let liList = songs.map((song)=> {
-                let $li = $('<li></li>').text(song.name).attr('data-song-id',song.id)
+                let $li = $('<li></li>').attr('data-song-id',song.id)
+                let $songWrapper = $('<div class="songWrapper"></div>')
+                let $songName = $('<div class="songName"></div>').text(song.name)
+                let $singer = $('<span class="singer"></span>').text(song.singer)
                 if(song.id === selectSongId){
                     $li.addClass('active')
                 }
+                let svgMan = `<svg id='svgMan' class="icon svgMan" aria-hidden="true">
+    <use xlink:href="#icon-man3"></use>
+</svg>`
+                let svgMusic = `<svg id='svgMusic' class="icon svgMusic" aria-hidden="true">
+    <use xlink:href="#icon-music"></use>
+</svg>`
+                $li.append(svgMusic,$songWrapper.append($songName,svgMan,$singer))
+                console.log($li[0])
                 return $li
             })
             let $el = $(this.el)
@@ -56,6 +68,8 @@
         },
         bindEvents(){
             $(this.view.el).on('click', 'li', (e)=>{
+                $('.uploadArea').hide()
+                $('main').addClass('active')
                 let songId = e.currentTarget.getAttribute('data-song-id')
                 this.model.data.selectSongId = songId
                 this.view.render(this.model.data)

@@ -2,7 +2,12 @@
     let view = {
         el: '.newSong',
         template:`
-        新建歌曲
+                <span>
+                    <svg id='plus' class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                    </svg>
+                    新建歌曲
+                </span>
         `,
         render(data){
             $(this.el).html(this.template)
@@ -23,6 +28,8 @@
             })
             $(this.view.el).on('click', ()=>{
                 window.eventHub.emit('new')
+                $('.uploadArea').show()
+                $('main').removeClass('active')
             })
         },
         active(){
