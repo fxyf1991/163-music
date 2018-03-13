@@ -81,7 +81,7 @@ body {
 .clickable{
     position: absolute;
     border: 1px solid #AA3722;
-    width: 12vw;
+    width: 9em;
     height: 6vh;
     top: 47vh;
     left: 5vh;
@@ -171,11 +171,12 @@ input{
 }
 button{
     background: white;
-    width: 12vw;
+    width: 9em;
     height: 3em;
     border: 1px solid #AA3722;
     color: #AA3722;
     border-radius: 5px;
+    margin-top: 1em
 }
 label{
     font-size: 1.3em;

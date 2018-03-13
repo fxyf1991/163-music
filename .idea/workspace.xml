@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ba32843-bd24-4571-97da-237d174f10ea" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/css/admin.css" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/admin.html" afterPath="$PROJECT_DIR$/src/admin.html" />
-      <change beforePath="$PROJECT_DIR$/src/js/admin/new-song.js" afterPath="$PROJECT_DIR$/src/js/admin/new-song.js" />
-      <change beforePath="$PROJECT_DIR$/src/js/admin/song-form.js" afterPath="$PROJECT_DIR$/src/js/admin/song-form.js" />
-      <change beforePath="$PROJECT_DIR$/src/js/admin/song-list.js" afterPath="$PROJECT_DIR$/src/js/admin/song-list.js" />
-      <change beforePath="$PROJECT_DIR$/src/js/admin/upload-song.js" afterPath="$PROJECT_DIR$/src/js/admin/upload-song.js" />
+      <change beforePath="$PROJECT_DIR$/src/css/admin.css" afterPath="$PROJECT_DIR$/src/css/admin.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -57,17 +52,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="admin.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/css/admin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+            <state relative-caret-position="822">
+              <caret line="178" column="19" lean-forward="false" selection-start-line="178" selection-start-column="19" selection-end-line="178" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="song-list.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="song-list.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/admin/song-list.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="645">
@@ -165,8 +160,8 @@
       <find>hide</find>
       <find>transition</find>
       <find>new</find>
-      <find>click</find>
       <find>inpu</find>
+      <find>click</find>
     </findStrings>
     <replaceStrings>
       <replace>this.$el</replace>
@@ -203,8 +198,8 @@
         <option value="$PROJECT_DIR$/src/js/admin/upload-song.js" />
         <option value="$PROJECT_DIR$/src/js/admin/song-form.js" />
         <option value="$PROJECT_DIR$/src/js/admin/new-song.js" />
-        <option value="$PROJECT_DIR$/src/css/admin.css" />
         <option value="$PROJECT_DIR$/src/js/admin/song-list.js" />
+        <option value="$PROJECT_DIR$/src/css/admin.css" />
       </list>
     </option>
   </component>
@@ -342,12 +337,12 @@
       <workItem from="1520593543405" duration="9314000" />
       <workItem from="1520646797968" duration="7467000" />
       <workItem from="1520655917417" duration="705000" />
-      <workItem from="1520685984480" duration="74785000" />
+      <workItem from="1520685984480" duration="75243000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124329000" />
+    <option name="totallyTimeSpent" value="124787000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3872" height="2092" extended-state="6" />
@@ -858,14 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/admin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/admin/song-list.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
@@ -875,6 +862,14 @@
             <marker date="1520916201731" expanded="true" signature="805:852" ph="..." />
             <marker date="1520916201731" expanded="true" signature="946:994" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="822">
+          <caret line="178" column="19" lean-forward="false" selection-start-line="178" selection-start-column="19" selection-end-line="178" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
