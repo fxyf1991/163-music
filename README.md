@@ -7,3 +7,4 @@
 4. 执行 hs
 5. 执行 node server.js 8888
 6. 浏览器输入 http://127.0.0.1:8080/src
+7. 管理页 http://127.0.0.1:8080/src/admin.html
